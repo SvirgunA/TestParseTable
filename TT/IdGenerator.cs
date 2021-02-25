@@ -3,7 +3,7 @@
     public class IdGenerator
     {
         private static IdGenerator _instance;
-        private const string _chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz~!@#$%^&*()_+|[];',./{}:<>?";
+        private const string Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz~!@#$%^&*()_+|[];',./{}:<>?";
         private int _cursor;
 
         private IdGenerator()
@@ -21,8 +21,8 @@
         public char GetId()
         {
             _cursor++;
-            if (_cursor == _chars.Length) _cursor = 0;
-            return _chars[_cursor];
+            if (_cursor == Chars.Length) _cursor = 0;
+            return Chars[_cursor];
         }
     }
 }
